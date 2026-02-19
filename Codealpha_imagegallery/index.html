@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRAMES — Visual Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">FR<span>A</span>MES</div>
+  <div class="header-meta">Curated Visual Archive</div>
+</header>
+
+<div class="filter-bar">
+  <span class="filter-label">Explore →</span>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="architecture">Architecture</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+  <button class="filter-btn" data-filter="portrait">Portrait</button>
+  <button class="filter-btn" data-filter="abstract">Abstract</button>
+  <button class="filter-btn" data-filter="urban">Urban</button>
+</div>
+
+<div class="gallery-wrap">
+  <div class="gallery-count">Showing <span id="count">12</span> images</div>
+
+  <div class="gallery" id="gallery">
+    <!-- Images populated by JS -->
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="icon">◇</div>
+    <p>No images in this category</p>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-backdrop" id="lbBackdrop"></div>
+  <button class="lb-close" id="lbClose" title="Close">✕</button>
+  <div class="lb-container">
+    <button class="lb-nav" id="lbPrev" title="Previous">‹</button>
+    <div class="lb-img-wrap" id="lbImgWrap">
+      <div class="lb-filters">
+        <button class="lb-filter-btn active" data-imgfilter="none">Original</button>
+        <button class="lb-filter-btn" data-imgfilter="f-bw">B&W</button>
+        <button class="lb-filter-btn" data-imgfilter="f-warm">Warm</button>
+        <button class="lb-filter-btn" data-imgfilter="f-cool">Cool</button>
+        <button class="lb-filter-btn" data-imgfilter="f-fade">Fade</button>
+        <button class="lb-filter-btn" data-imgfilter="f-vivid">Vivid</button>
+      </div>
+      <img id="lbImg" src="" alt="">
+      <div class="lb-info">
+        <span class="lb-title" id="lbTitle"></span>
+        <span class="lb-counter" id="lbCounter"></span>
+      </div>
+    </div>
+    <button class="lb-nav" id="lbNext" title="Next">›</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
